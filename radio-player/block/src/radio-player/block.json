@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "radio-player/radio-player",
+  "version": "1.0.0",
+  "title": "Radio Player",
+  "category": "media",
+  "icon": "controls-play",
+  "description": "Display Radio Player",
+  "supports": {
+    "align": true
+  },
+  "attributes": {
+    "id": {
+      "type": "number"
+    },
+    "align": {
+      "type": "string"
+    }
+  },
+  "keywords": [
+    "radio",
+    "player",
+    "radio player"
+  ],
+  "textdomain": "radio-player",
+  "editorScript": "file:./index.js"
+}
