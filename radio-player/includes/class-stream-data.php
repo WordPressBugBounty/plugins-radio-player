@@ -29,6 +29,10 @@ class Radio_Player_Stream_Data {
             if ( empty( $title ) ) {
                 $icecast_url = apply_filters( 'radio_player/icecast_metadata_url', $this->get_icecast_base_url() . '/status-json.xsl' );
                 $meta = $this->fetch_and_decode( $icecast_url );
+                echo '<pre>';
+                print_r( $meta );
+                echo '</pre>';
+                die;
                 if ( !empty( $meta ) ) {
                     $source = $meta['icestats']['source'];
                     if ( empty( $source[0] ) ) {
@@ -216,7 +220,7 @@ class Radio_Player_Stream_Data {
         return false;
     }
 
-    function get_icecast_base_url() {
+    public function get_icecast_base_url() {
         $parsed_url = parse_url( $this->url );
         $base_url = $parsed_url['scheme'] . '://' . $parsed_url['host'];
         if ( isset( $parsed_url['port'] ) ) {
@@ -235,7 +239,7 @@ class Radio_Player_Stream_Data {
         return false;
     }
 
-    function get_live_365_id() {
+    public function get_live_365_id() {
         preg_match( '/\\/(a[\\w\\d]+)(\\?|$)/', $this->url, $matches );
         return $matches[1] ?? null;
     }

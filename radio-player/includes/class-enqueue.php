@@ -80,6 +80,7 @@ class Radio_Player_Enqueue {
         );
         wp_style_add_data( 'radio-player-admin', 'rtl', 'replace' );
         /**---- admin scripts -----*/
+        $deps = array('wp-element', 'wp-components', 'wp-util');
         $page = $_GET['page'] ?? '';
         wp_register_script(
             'sweetalert2',
@@ -88,6 +89,7 @@ class Radio_Player_Enqueue {
             '11.4.8',
             true
         );
+        $deps[] = 'sweetalert2';
         if ( 'radio-player' == $page ) {
             wp_enqueue_media();
         }
@@ -112,23 +114,18 @@ class Radio_Player_Enqueue {
             );
         }
         wp_register_script(
-            'react-player',
-            RADIO_PLAYER_ASSETS . '/vendor/react-player.min.js',
+            'radio-player-hls',
+            RADIO_PLAYER_ASSETS . '/vendor/hls.min.js',
             [],
-            '2.15.1',
+            false,
             true
         );
+        $deps[] = 'radio-player-hls';
         //radio player admin
         wp_enqueue_script(
             'radio-player-admin',
             RADIO_PLAYER_ASSETS . '/js/admin.js',
-            array(
-                'wp-element',
-                'wp-components',
-                'wp-util',
-                'sweetalert2',
-                'react-player'
-            ),
+            $deps,
             RADIO_PLAYER_VERSION,
             true
         );
