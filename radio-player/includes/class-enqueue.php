@@ -160,7 +160,9 @@ class Radio_Player_Enqueue {
         $css = '';
         //metaDataTextSpeed
         $metaDataTextSpeed = radio_player_get_setting( 'metaDataTextSpeed', 10 );
-        $css .= 'div.radio-player .radio-player-song-title span.track-title { animation-duration: ' . $metaDataTextSpeed . 's; }';
+        if ( 'disabled' !== $metaDataTextSpeed ) {
+            $css .= 'div.radio-player .radio-player-song-title span.track-title { animation-duration: ' . $metaDataTextSpeed . 's; }';
+        }
         $custom_css = radio_player_get_setting( 'customCSS' );
         $css .= $custom_css;
         return $css;

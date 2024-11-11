@@ -29,17 +29,13 @@ class Radio_Player_Stream_Data {
             if ( empty( $title ) ) {
                 $icecast_url = apply_filters( 'radio_player/icecast_metadata_url', $this->get_icecast_base_url() . '/status-json.xsl' );
                 $meta = $this->fetch_and_decode( $icecast_url );
-                echo '<pre>';
-                print_r( $meta );
-                echo '</pre>';
-                die;
                 if ( !empty( $meta ) ) {
                     $source = $meta['icestats']['source'];
                     if ( empty( $source[0] ) ) {
                         $stream_data['title'] = $source['title'];
                     } else {
                         $source_item = array_filter( $source, function ( $item ) {
-                            return strpos( $item['listenurl'], $this->url ) !== false;
+                            return str_contains( $item['listenurl'], $this->url );
                         } );
                         if ( !empty( $source_item ) ) {
                             $stream_data['title'] = reset( $source_item )['title'];
@@ -121,9 +117,13 @@ class Radio_Player_Stream_Data {
         }
         if ( $stream && ($meta_data = stream_get_meta_data( $stream )) && isset( $meta_data['wrapper_data'] ) ) {
             foreach ( $meta_data['wrapper_data'] as $header ) {
-                if ( strpos( strtolower( $header ), 'icy-metaint' ) !== false ) {
+                // Check if the header contains 'icy-metaint' and extract the value
+                if ( stripos( $header, 'icy-metaint' ) !== false ) {
                     $tmp = explode( ":", $header );
-                    $icy_metaint = trim( $tmp[1] );
+                    if ( isset( $tmp[1] ) ) {
+                        $icy_metaint = intval( trim( $tmp[1] ) );
+                        // Make sure it's an integer
+                    }
                     break;
                 }
             }
@@ -141,6 +141,7 @@ class Radio_Player_Stream_Data {
                 fclose( $stream );
             }
         }
+        return $result;
         return $result;
     }
 

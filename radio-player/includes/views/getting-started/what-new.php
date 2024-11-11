@@ -1,6 +1,15 @@
 <?php
 
 $logs = [
+	'v2.0.82' => [
+		'date' => '11 November, 2024',
+		'new'  => [
+			'Added option to disable the song title scrolling.',
+		],
+		'fix'  => [
+			'Fixed stream metadata fetching issue for iceCast streams',
+		],
+	],
 	'v2.0.81' => [
 		'date' => '18 September, 2024',
 		'fix'  => [

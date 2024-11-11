@@ -74,7 +74,7 @@ esc_html_e( 'Basic Usage', 'radio-player' );
                 </svg>
 
                 <span><?php 
-esc_html_e( 'Proxy Player Addon', 'radio-player' );
+esc_html_e( 'HTTP Stream Player', 'radio-player' );
 ?>
             </div>
 
@@ -96,7 +96,7 @@ esc_html_e( 'Proxy Player Addon', 'radio-player' );
                 </svg>
 
                 <span><?php 
-esc_html_e( 'Ads Player Addon', 'radio-player' );
+esc_html_e( 'Ads Player', 'radio-player' );
 ?>
             </div>
 
