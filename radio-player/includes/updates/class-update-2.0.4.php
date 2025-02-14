@@ -8,6 +8,7 @@ class Radio_Player_Update_2_0_4 {
 
 	public function __construct() {
 		$this->add_table_col();
+
 		$this->update_shortcode_locations();
 	}
 
@@ -15,10 +16,23 @@ class Radio_Player_Update_2_0_4 {
 		global $wpdb;
 
 		$table_name = $wpdb->prefix . 'radio_player_players';
+		$column_name = 'locations';
 
-		$sql = "ALTER TABLE $table_name ADD `locations` LONGTEXT NULL AFTER `title`;";
-		$wpdb->query( $sql );
+		// Check if the column exists
+		$row = $wpdb->get_row(
+			$wpdb->prepare(
+				"SHOW COLUMNS FROM `$table_name` LIKE %s",
+				$column_name
+			)
+		);
+
+		if (!$row) {
+			// Column does not exist, add it
+			$sql = "ALTER TABLE `$table_name` ADD COLUMN `$column_name` LONGTEXT NULL AFTER `title`;";
+			$wpdb->query($sql);
+		}
 	}
+
 
 	public function update_shortcode_locations() {
 		$pages = get_pages( [

@@ -50,7 +50,8 @@ class Radio_Player_Ajax {
         if ( empty( $url ) ) {
             wp_send_json_error( __( 'No URL provided!', 'radio-player' ) );
         }
-        $stream_data = Radio_Player_Stream_Data::instance( $url )->get_stream_data();
+        $prev_title = ( !empty( $_REQUEST['prev_title'] ) ? sanitize_text_field( $_REQUEST['prev_title'] ) : '' );
+        $stream_data = Radio_Player_Stream_Data::instance( $url, $prev_title )->get_stream_data();
         wp_send_json_success( $stream_data );
     }
 

@@ -119,7 +119,7 @@ class Radio_Player_Admin {
             $slug,
             [$this, 'render_radio_player_page'],
             RADIO_PLAYER_ASSETS . '/images/play.svg',
-            59
+            57
         );
         // All players page
         $this->admin_pages['players_page'] = add_submenu_page(

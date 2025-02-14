@@ -121,8 +121,7 @@ final class Radio_Player {
         $notices = get_option( sanitize_key( 'radio_player_notices' ), [] );
         foreach ( $notices as $notice ) {
             ?>
-            <div
-                    class="notice notice-large is-dismissible radio-player-admin-notice notice-<?php 
+            <div class="notice notice-large is-dismissible radio-player-admin-notice notice-<?php 
             echo esc_attr( $notice['class'] );
             ?>">
 				<?php 

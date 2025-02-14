@@ -4,7 +4,7 @@
  * Plugin Name: Radio Player
  * Plugin URI:  https://softlabbd.com/radio-player
  * Description: Adds live audio streaming to WordPress, supporting Shoutcast, Icecast, and more for easy broadcasting.
- * Version:     2.0.82
+ * Version:     2.0.83
  * Author:      SoftLab
  * Author URI:  https://softlabbd.com/
  * Text Domain: radio-player
@@ -83,7 +83,7 @@ if ( !version_compare( get_bloginfo( 'version' ), '5.0', '>=' ) ) {
         }
         // ... Your plugin's main file logic ...
         /** define constants */
-        define( 'RADIO_PLAYER_VERSION', '2.0.82' );
+        define( 'RADIO_PLAYER_VERSION', '2.0.83' );
         define( 'RADIO_PLAYER_FILE', __FILE__ );
         define( 'RADIO_PLAYER_PATH', dirname( RADIO_PLAYER_FILE ) );
         define( 'RADIO_PLAYER_INCLUDES', RADIO_PLAYER_PATH . '/includes' );

@@ -2,9 +2,9 @@
 Contributors: softlab, princeahmed
 Tags: radio player, shoutcast, icecast, stream, audio
 Requires at least: 5.0
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 2.0.82
+Stable tag: 2.0.83
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -248,7 +248,10 @@ Yes, the radio player is compatible with mobile devices and supports mobile medi
 
 == Changelog ==
 
-= 2.0.82 = (11 November 2024) =
+= 2.0.83 (11 November 2024) =
+* **Fix:** Fixed SSRF vulnerability issue.
+
+= 2.0.82 (11 November 2024) =
 * **New:** Added option to disable the song title scrolling.
 * **Fix:** Fixed stream metadata fetching issue for iceCast streams.
 

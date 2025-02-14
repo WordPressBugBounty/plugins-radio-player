@@ -6,8 +6,11 @@ class Radio_Player_Stream_Data {
 
     private $url;
 
-    public function __construct( $url ) {
+    public $prev_title = '';
+
+    public function __construct( $url, $prev_title = '' ) {
         $this->url = $url;
+        $this->prev_title = $prev_title;
     }
 
     public function get_stream_data() {
@@ -22,7 +25,7 @@ class Radio_Player_Stream_Data {
             $shoutcast_url = apply_filters( 'radio_player/shoutcast_metadata_url', $this->get_shoutcast_base_url() . "/currentsong?sid={$sid}" );
             $title = $this->get_remote_response( $shoutcast_url );
             if ( !empty( $title ) ) {
-                $stream_data['title'] = $title;
+                $stream_data['title'] = sanitize_text_field( $title );
             }
         } elseif ( 'icecast' == $stream_type ) {
             // Try Icecast
@@ -32,19 +35,19 @@ class Radio_Player_Stream_Data {
                 if ( !empty( $meta ) ) {
                     $source = $meta['icestats']['source'];
                     if ( empty( $source[0] ) ) {
-                        $stream_data['title'] = $source['title'];
+                        $stream_data['title'] = sanitize_text_field( $source['title'] );
                     } else {
                         $source_item = array_filter( $source, function ( $item ) {
                             return str_contains( $item['listenurl'], $this->url );
                         } );
                         if ( !empty( $source_item ) ) {
-                            $stream_data['title'] = reset( $source_item )['title'];
+                            $stream_data['title'] = sanitize_text_field( reset( $source_item )['title'] );
                         } else {
                             $source_item = array_filter( $source, function ( $item ) {
                                 return !empty( $item['title'] );
                             } );
                             if ( !empty( $source_item ) ) {
-                                $stream_data['title'] = reset( $source_item )['title'];
+                                $stream_data['title'] = sanitize_text_field( reset( $source_item )['title'] );
                             }
                         }
                     }
@@ -63,13 +66,13 @@ class Radio_Player_Stream_Data {
                     $artwork_element = $xpath->query( '//img[@class="MuiBox-root mui-style-3rwnws"]/@src' );
                     $artist_element = $xpath->query( '//p[@class="MuiTypography-root MuiTypography-body1 mui-style-1x0uvdd"]' );
                     if ( $title_element->length > 0 ) {
-                        $stream_data['title'] = $title_element->item( 0 )->nodeValue;
+                        $stream_data['title'] = sanitize_text_field( $title_element->item( 0 )->nodeValue );
                     }
                     if ( $artwork_element->length > 0 ) {
-                        $stream_data['art'] = $artwork_element->item( 0 )->nodeValue;
+                        $stream_data['art'] = sanitize_text_field( $artwork_element->item( 0 )->nodeValue );
                     }
                     if ( $artist_element->length > 0 ) {
-                        $stream_data['artist'] = $artist_element->item( 0 )->nodeValue;
+                        $stream_data['artist'] = sanitize_text_field( $artist_element->item( 0 )->nodeValue );
                     }
                 }
             }
@@ -83,15 +86,15 @@ class Radio_Player_Stream_Data {
                     $stream_data = json_decode( $meta_data, true );
                 }
             } else {
-                $stream_data['title'] = $this->fetch_stream_title( $this->url );
+                $stream_data['title'] = sanitize_text_field( $this->fetch_stream_title( $this->url ) );
             }
         }
-        if ( !empty( $stream_data['title'] ) && strlen( $stream_data['title'] ) > 3 && empty( $stream_data['art'] ) ) {
+        if ( !empty( $stream_data['title'] ) && strlen( $stream_data['title'] ) > 3 && empty( $stream_data['art'] ) && $this->prev_title != $stream_data['title'] ) {
         }
         return $stream_data;
     }
 
-    public function fetch_stream_title( $stream_url ) {
+    public function fetch_stream_title_bk( $stream_url ) {
         $result = '';
         if ( empty( $stream_url ) ) {
             return $result;
@@ -142,7 +145,63 @@ class Radio_Player_Stream_Data {
             }
         }
         return $result;
-        return $result;
+    }
+
+    public function fetch_stream_title( $stream_url ) {
+        if ( empty( $stream_url ) ) {
+            return '';
+        }
+        $icy_metaint = -1;
+        $needle = 'StreamTitle=';
+        $user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36';
+        $context_options = [
+            'http' => [
+                'method'     => 'GET',
+                'header'     => 'Icy-MetaData: 1',
+                'user_agent' => $user_agent,
+            ],
+            'ssl'  => [
+                'allow_self_signed' => true,
+                'verify_peer'       => false,
+                'verify_peer_name'  => false,
+            ],
+        ];
+        stream_context_set_default( $context_options );
+        $stream = @fopen( $stream_url, 'r' );
+        if ( !$stream ) {
+            return '';
+        }
+        $meta_data = stream_get_meta_data( $stream );
+        if ( !isset( $meta_data['wrapper_data'] ) ) {
+            fclose( $stream );
+            return '';
+        }
+        // Extract icy-metaint value from headers
+        foreach ( $meta_data['wrapper_data'] as $header ) {
+            if ( stripos( $header, 'icy-metaint' ) !== false ) {
+                $parts = explode( ":", $header, 2 );
+                if ( isset( $parts[1] ) ) {
+                    $icy_metaint = (int) trim( $parts[1] );
+                }
+                break;
+            }
+        }
+        if ( $icy_metaint === -1 ) {
+            fclose( $stream );
+            return '';
+        }
+        // Read metadata buffer
+        $buffer = stream_get_contents( $stream, 300, $icy_metaint );
+        fclose( $stream );
+        // Extract and clean the stream title
+        if ( strpos( $buffer, $needle ) !== false ) {
+            $title_parts = explode( $needle, $buffer, 2 );
+            $title = trim( $title_parts[1] );
+            if ( !empty( $title ) ) {
+                return substr( $title, 1, strpos( $title, ';' ) - 2 );
+            }
+        }
+        return '';
     }
 
     public function fetch_and_decode( $url ) {
@@ -242,12 +301,12 @@ class Radio_Player_Stream_Data {
 
     public function get_live_365_id() {
         preg_match( '/\\/(a[\\w\\d]+)(\\?|$)/', $this->url, $matches );
-        return $matches[1] ?? null;
+        return ( isset( $matches[1] ) ? $matches[1] : null );
     }
 
-    public static function instance( $url ) {
+    public static function instance( $url, $prev_title = '' ) {
         if ( null === self::$instance ) {
-            self::$instance = new self($url);
+            self::$instance = new self($url, $prev_title);
         }
         return self::$instance;
     }

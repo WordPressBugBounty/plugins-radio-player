@@ -1,20 +1,21 @@
-# Copyright (C) 2024 SoftLab
+# Copyright (C) 2025 SoftLab
 # This file is distributed under the same license as the Radio Player plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Radio Player 2.0.82\n"
+"Project-Id-Version: Radio Player 2.0.83\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/radio-player\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-11T12:30:39+00:00\n"
+"POT-Creation-Date: 2025-02-13T23:45:30+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.6.0\n"
+"X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: radio-player\n"
 
 #. Plugin Name of the plugin
+#: plugin.php
 #: elementor/class-elementor-player-widget.php:15
 #: elementor/class-elementor-player-widget.php:34
 #: includes/class-admin.php:156
@@ -24,18 +25,22 @@ msgid "Radio Player"
 msgstr ""
 
 #. Plugin URI of the plugin
+#: plugin.php
 msgid "https://softlabbd.com/radio-player"
 msgstr ""
 
 #. Description of the plugin
+#: plugin.php
 msgid "Adds live audio streaming to WordPress, supporting Shoutcast, Icecast, and more for easy broadcasting."
 msgstr ""
 
 #. Author of the plugin
+#: plugin.php
 msgid "SoftLab"
 msgstr ""
 
 #. Author URI of the plugin
+#: plugin.php
 msgid "https://softlabbd.com/"
 msgstr ""
 
@@ -110,15 +115,15 @@ msgstr ""
 
 #: includes/class-ajax.php:46
 #: includes/class-ajax.php:64
-#: includes/class-ajax.php:81
-#: includes/class-ajax.php:90
-#: includes/class-ajax.php:121
-#: includes/class-ajax.php:155
-#: includes/class-ajax.php:184
-#: includes/class-ajax.php:239
-#: includes/class-ajax.php:251
-#: includes/class-ajax.php:295
-#: includes/class-ajax.php:315
+#: includes/class-ajax.php:83
+#: includes/class-ajax.php:92
+#: includes/class-ajax.php:123
+#: includes/class-ajax.php:157
+#: includes/class-ajax.php:186
+#: includes/class-ajax.php:241
+#: includes/class-ajax.php:253
+#: includes/class-ajax.php:297
+#: includes/class-ajax.php:317
 msgid "Invalid nonce"
 msgstr ""
 
@@ -131,41 +136,41 @@ msgid "No URL provided!"
 msgstr ""
 
 #. translators: %s: User feedback
-#: includes/class-ajax.php:98
+#: includes/class-ajax.php:100
 msgid "Feedback: %s"
 msgstr ""
 
 #. translators: %s: Website URL
-#: includes/class-ajax.php:101
+#: includes/class-ajax.php:103
 msgid "Website URL: %s"
 msgstr ""
 
 #. translators: %s: Plugin name
-#: includes/class-ajax.php:103
+#: includes/class-ajax.php:105
 msgid "Feedback for %s"
 msgstr ""
 
-#: includes/class-ajax.php:126
+#: includes/class-ajax.php:128
 msgid "You do not have permission to import data"
 msgstr ""
 
-#: includes/class-ajax.php:160
+#: includes/class-ajax.php:162
 msgid "You do not have permission to export data"
 msgstr ""
 
-#: includes/class-ajax.php:189
+#: includes/class-ajax.php:191
 msgid "You do not have permission to get players"
 msgstr ""
 
-#: includes/class-ajax.php:244
+#: includes/class-ajax.php:246
 msgid "You do not have permission to update this player"
 msgstr ""
 
-#: includes/class-ajax.php:299
+#: includes/class-ajax.php:301
 msgid "You do not have permission to delete this player"
 msgstr ""
 
-#: includes/class-ajax.php:320
+#: includes/class-ajax.php:322
 msgid "You do not have permission to update settings"
 msgstr ""
 
@@ -187,7 +192,7 @@ msgstr[1] ""
 msgid "Radio Player Stats"
 msgstr ""
 
-#: includes/class-stream-data.php:285
+#: includes/class-stream-data.php:290
 msgid " by "
 msgstr ""
 
@@ -1475,7 +1480,11 @@ msgid "Select"
 msgstr ""
 
 #: assets/js/admin.js:21
-msgid "Enter the playable shoutcast, icecast or mp3 stream URL."
+msgid "Select Media"
+msgstr ""
+
+#: assets/js/admin.js:21
+msgid "Enter the playable shoutcast, icecast or mp3 stream URL or you can also use any audio files from your media library."
 msgstr ""
 
 #: assets/js/admin.js:21

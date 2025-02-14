@@ -90,7 +90,7 @@ function radio_player_get_formatted_player(  $player  ) {
     }
     $player['id'] = intval( $player['id'] );
     $player['status'] = filter_var( $player['status'], FILTER_VALIDATE_BOOLEAN );
-    $player['config'] = unserialize( $player['config'] );
+    $player['config'] = maybe_unserialize( $player['config'] );
     $player['count'] = radio_player_get_play_count( $player['id'] );
     $player['locations'] = ( !empty( $player['locations'] ) ? array_values( maybe_unserialize( $player['locations'] ) ) : [] );
     return $player;
