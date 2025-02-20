@@ -4,7 +4,7 @@ Tags: radio player, shoutcast, icecast, stream, audio
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 2.0.83
+Stable tag: 2.0.85
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -248,7 +248,10 @@ Yes, the radio player is compatible with mobile devices and supports mobile medi
 
 == Changelog ==
 
-= 2.0.83 (11 November 2024) =
+= 2.0.85 (17 Feb, 2025) =
+* **Fix:** Fixed Radio Player metadata fetching issue.
+
+= 2.0.83 (15 Feb, 2025) =
 * **Fix:** Fixed SSRF vulnerability issue.
 
 = 2.0.82 (11 November 2024) =

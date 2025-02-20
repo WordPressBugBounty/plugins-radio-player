@@ -19,6 +19,7 @@ class Radio_Player_Hooks {
 
     public function add_query_vars( $vars ) {
         $vars[] = 'radio_player';
+        $vars[] = 'radio_player_play';
         return $vars;
     }
 

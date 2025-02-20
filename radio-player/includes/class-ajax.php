@@ -190,28 +190,29 @@ class Radio_Player_Ajax {
             }
         }
         $posted = ( !$data ? json_decode( base64_decode( $_POST['data'] ), 1 ) : $data );
-        $id = ( !empty( $posted['id'] ) ? intval( $posted['id'] ) : '' );
+        $id = ( !empty( $posted['id'] ) ? intval( $posted['id'] ) : 0 );
         $title = ( !empty( $posted['title'] ) ? sanitize_text_field( $posted['title'] ) : '' );
         $status = ( !empty( $posted['status'] ) ? 1 : 0 );
         $config = ( !empty( $posted['config'] ) ? $posted['config'] : $posted );
+        global $wpdb;
+        $table = $wpdb->prefix . 'radio_player_players';
         $insert_data = [
-            'id'     => $id,
             'title'  => $title,
             'status' => $status,
             'config' => serialize( $config ),
         ];
-        global $wpdb;
-        $table = $wpdb->prefix . 'radio_player_players';
-        if ( $id && empty( $data ) ) {
+        if ( $id > 0 ) {
+            $insert_data['id'] = $id;
+        }
+        if ( $id > 0 && empty( $data ) ) {
             $wpdb->update( $table, $insert_data, [
                 'id' => $id,
             ] );
         } else {
             $wpdb->insert( $table, $insert_data );
-            $insert_data['created_at'] = date( 'Y-m-d H:i:s' );
+            $id = $wpdb->insert_id;
         }
-        $player_id = ( $wpdb->insert_id ?: $id );
-        $insert_data['id'] = $player_id;
+        $insert_data['id'] = $id;
         $insert_data['config'] = $posted;
         if ( !empty( $data ) ) {
             return $insert_data;
