@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Radio Player plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Radio Player 2.0.85\n"
+"Project-Id-Version: Radio Player 2.0.86\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/radio-player\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-02-20T09:20:19+00:00\n"
+"POT-Creation-Date: 2025-03-31T06:59:01+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: radio-player\n"
@@ -21,6 +21,7 @@ msgstr ""
 #: includes/class-admin.php:156
 #: includes/class-admin.php:157
 #: includes/views/getting-started/index.php:11
+#: assets/js/admin.js:42
 msgid "Radio Player"
 msgstr ""
 
@@ -51,7 +52,7 @@ msgstr ""
 #: elementor/class-elementor-player-widget.php:49
 #: elementor/class-elementor-player-widget.php:53
 #: includes/views/getting-started/basic-usage.php:151
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 #: block/build/radio-player/index.js:1
 msgid "Select Player"
 msgstr ""
@@ -77,7 +78,7 @@ msgid "Please select a player."
 msgstr ""
 
 #: includes/class-admin.php:166
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "All Players"
 msgstr ""
 
@@ -104,7 +105,7 @@ msgid "Settings - Radio Player"
 msgstr ""
 
 #: includes/class-admin.php:185
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Settings"
 msgstr ""
 
@@ -211,7 +212,7 @@ msgid "Most Played Radio Players"
 msgstr ""
 
 #: includes/views/email-report.php:43
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Player Title"
 msgstr ""
 
@@ -400,7 +401,7 @@ msgid "Video Tutorial"
 msgstr ""
 
 #: includes/views/getting-started/basic-usage.php:6
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Add New Player"
 msgstr ""
 
@@ -521,7 +522,7 @@ msgid "Here's a quick rundown of the modes available:"
 msgstr ""
 
 #: includes/views/getting-started/basic-usage.php:133
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Always"
 msgstr ""
 
@@ -530,7 +531,7 @@ msgid "The player will always be displayed."
 msgstr ""
 
 #: includes/views/getting-started/basic-usage.php:136
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Daily"
 msgstr ""
 
@@ -539,7 +540,7 @@ msgid "Use the \"Daily\" mode to set specific times of a day to show/ hide the p
 msgstr ""
 
 #: includes/views/getting-started/basic-usage.php:139
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Weekly"
 msgstr ""
 
@@ -548,7 +549,7 @@ msgid "Use the \"Weekly\" mode to set specific days and times of the days to sho
 msgstr ""
 
 #: includes/views/getting-started/basic-usage.php:142
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Monthly"
 msgstr ""
 
@@ -581,7 +582,7 @@ msgid "After selecting the schedule type, set the times, days or dates for which
 msgstr ""
 
 #: includes/views/getting-started/basic-usage.php:154
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Save Changes"
 msgstr ""
 
@@ -635,7 +636,7 @@ msgstr ""
 
 #: includes/views/getting-started/get-pro.php:45
 #: includes/views/getting-started/introduction.php:40
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Custom CSS"
 msgstr ""
 
@@ -657,13 +658,13 @@ msgid "Multiple Player Skins"
 msgstr ""
 
 #: includes/views/getting-started/get-pro.php:65
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Stations Playlist"
 msgstr ""
 
 #: includes/views/getting-started/get-pro.php:69
-#: assets/js/admin.js:21
-#: assets/js/frontend.js:13
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
 #: block/build/radio-player/index.js:1
 msgid "Recent Play History"
 msgstr ""
@@ -1000,7 +1001,7 @@ msgid "Let's explore the powerful features of the plugin"
 msgstr ""
 
 #: includes/views/getting-started/introduction.php:98
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Sticky Player"
 msgstr ""
 
@@ -1148,7 +1149,7 @@ msgid "Not all streams may have metadata for display."
 msgstr ""
 
 #: includes/views/notice/radio-player-proxy-addon.php:15
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Radio Player Proxy Add-on"
 msgstr ""
 
@@ -1181,7 +1182,7 @@ msgid "Hide From Menu"
 msgstr ""
 
 #: includes/views/recommended-plugins.php:432
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Are you sure?"
 msgstr ""
 
@@ -1213,1453 +1214,1572 @@ msgstr ""
 msgid "1.0.1"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to use this feature."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Unlock PRO Features"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "GET PRO"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "Back"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Back to players list"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Edit Player"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Enter Player Title"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Copy shortcode"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Save"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "Saved"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Preview"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "Embed Code"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Insert the following code into any webpage to showcase the player."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Copy"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Copied!"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Embed code copied to clipboard"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Upgrade to PRO to embed the player on any website or page."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "PRO feature."
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "You won't be able to revert this!"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Yes, delete it!"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "No, cancel!"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Delete"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "You can't add more than 10 players in the free version."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Success"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Player duplicated successfully"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Item"
 msgid_plural "Items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Columns"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Items Per Page"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Sort By"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "ID"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Name"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Date Created"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Sort Order"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Ascending"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Descending"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Item(s) selected"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Clear Selection"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "PRO Feature"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to duplicate player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Duplicate"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "You will not be able to recover this shortcode!"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Title"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Status"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "Shortcode active/inactive status"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Shortcode"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Play Count"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "The number of how many times the player has been played"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Locations"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "The locations where the shortcode is used"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Created at"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Actions"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Player status"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to see the total play count"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "PRO"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Player Locations"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "0"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Edit"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Duplicate Player"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Get Embed Code"
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "Embed Code"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Copy"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Copied!"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Embed code copied to clipboard"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Upgrade to PRO to embed the player on any website or page."
-msgstr ""
-
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "No, Players!"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "You have not created any player yet."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Add new player"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enter image url or select image"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Insert image"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Insert"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "It appears you're using an HTTP stream URL, which may not play on sites loaded via HTTPS."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Sorry, it looks like the provided URL is a .pls file. In order to play the radio station, please use the direct stream URL instead of the .pls file."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "The direct stream URL should be something like:"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Would you like to delete this station?"
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "Station Title"
-msgstr ""
-
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enter the station title."
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "Station Stream"
+#: assets/js/admin.js:42
+msgid "Stream"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enter the station stream url"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select File"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select"
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "Select Media"
+#: assets/js/admin.js:42
+msgid "Select Local Media"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enter the playable shoutcast, icecast or mp3 stream URL or you can also use any audio files from your media library."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "For example:"
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "Station Logo"
+#: assets/js/admin.js:42
+msgid "Art"
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "Set the station logo image."
+#: assets/js/admin.js:42
+msgid "Upload a station logo or image."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+msgid "Playlist"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Select or create a playlist"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Create a playlist or select an existing playlist."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Station Title"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Radio Stations"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Add your radio stations here. You can add multiple radio stations with title, stream and logo."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Multiple Stations - Pro Feature"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to add multiple stations in the same player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Add New Station"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skin 1"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skin 2"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skin 3"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skin 4"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skin 5"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skin 6"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skin 7"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skin 8"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skin 9"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skin 10"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skin 11"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "Skin 12"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Choose Player Skin"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skins will be applied to the shortcode and popup players but not to the sticky player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to use this skin"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Player Controls"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Customize the different controls and elements of the player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "Autoplay"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Upgrade to PRO to enable autoplay."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Enable to start playing the radio automatically when the page loads."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Autoplay may not work as expected, as modern browsers block it for user experience and security."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Progressbar"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Show/hide the playback progress bar in the player."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "The progress bar is available only for local files and not for live streams."
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Popup Icon"
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "Pro Feature"
-msgstr ""
-
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to use the popup player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Show/ hide the popup player icon in the player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to use the playlist."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "If player has multiple radio stations, playlist icon could be show/hide."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Volume Control"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Show/hide the volume control button."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Player Status"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Show/hide the player status."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Show Track Title"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Show/ hide the currently playing track title in the player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Not all streams may provide metadata for the currently playing content."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "If metadata isn't visible, ensure \"allow_url_fopen\" is enabled on your server. We advise contacting your web host to activate this setting."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "If the \"allow_url_fopen\" is enabled on the server, but still the metadata not displaying, try to enable the \"Metadata Proxy\" option in the plugin settings page. "
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Show Artist Name"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to show the artist name."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Show/ hide the currently playing track artist name in the player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Artwork Image"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to show the artwork image."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Show/ hide the currently playing track artwork image in the player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Note: The artwork image will replace the station logo image."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Player Button Text"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enter the text for the player button."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "History Icon"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to display the play history."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enable the History icon to display the recent played track list."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "The recent play history might not be available for all streams."
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "Player Appearance"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Customize the player appearance."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Player Width"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Devices"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Desktop"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Mobile"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Set the player width on "
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Background Type"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Upgrade to PRO to customize the player background."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Color"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Image"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Blur"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Select the player background type color/ image."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Note:"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Blur background will be automatically applied based on the station thumbnail/ artwork."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Background Image"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Set the player background image."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Background Color"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Solid"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Gradient"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Select the background color type solid/ gradient."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Upgrade to PRO to customize the player background color."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Customize the player background color."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Text & Button Color"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Upgrade to PRO to customize the player colors."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Customize the player text and button color."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Border Radius"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Set border radius in pixels."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Box Shadow"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Horizontal"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Vertical"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Spread"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Shadow Color"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Shadow Type"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Inset"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Outset"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Set Player Box Shadow."
-msgstr ""
-
-#: assets/js/admin.js:21
-#: assets/js/frontend.js:13
-#: block/build/radio-player/index.js:1
-msgid "OFFLINE"
-msgstr ""
-
-#: assets/js/admin.js:21
-#: assets/js/frontend.js:13
-#: block/build/radio-player/index.js:1
-msgid "LIVE"
-msgstr ""
-
-#: assets/js/admin.js:21
-#: assets/js/frontend.js:13
-#: block/build/radio-player/index.js:1
-msgid "Expand Player"
-msgstr ""
-
-#: assets/js/admin.js:21
-#: assets/js/frontend.js:13
-#: block/build/radio-player/index.js:1
-msgid "Minimize Player"
-msgstr ""
-
-#: assets/js/admin.js:21
-#: assets/js/frontend.js:13
-#: block/build/radio-player/index.js:1
-msgid "No history found!"
-msgstr ""
-
-#: assets/js/admin.js:21
-#: assets/js/frontend.js:13
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
 #: block/build/radio-player/index.js:1
 msgid "Stations"
 msgstr ""
 
-#: assets/js/admin.js:21
-#: assets/js/frontend.js:13
+#: assets/js/admin.js:42
+msgid "Player Appearance"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Customize the player appearance."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Station List Title"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Enter the station list title."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Player Width"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Devices"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Desktop"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Mobile"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Set the player width on "
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Background Type"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Upgrade to PRO to customize the player background."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Color"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Image"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Blur"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Select the player background type color/ image."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Note:"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Blur background will be automatically applied based on the station thumbnail/ artwork."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Background Image"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Set the player background image."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Background Color"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Solid"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Gradient"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Select the background color type solid/ gradient."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Upgrade to PRO to customize the player background color."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Customize the player background color."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Text & Button Color"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Upgrade to PRO to customize the player colors."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Customize the player text and button color."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Border Radius"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Set border radius in pixels."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Box Shadow"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Horizontal"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Vertical"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Spread"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Shadow Color"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Shadow Type"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Inset"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Outset"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Set Player Box Shadow."
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "OFFLINE"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "LIVE"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "Expand Player"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "Minimize Player"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "No history found!"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+msgid "Close Sidebar"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+msgid "Search"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+msgid "Toggle Sidebar"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+msgid "Sort by:"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+msgid "A to Z"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+msgid "Z to A"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
 #: block/build/radio-player/index.js:1
 msgid "History"
 msgstr ""
 
-#: assets/js/admin.js:21
-#: assets/js/frontend.js:13
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
 #: block/build/radio-player/index.js:1
 msgid "Drag to move player"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Monday"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Tuesday"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Wednesday"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Thursday"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Friday"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Saturday"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Sunday"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Schedules"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Set up player display schedules for specific times."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Display Schedule"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "Pro Feature"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to display the player at specific times."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select when the player will be displayed."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Daily Play Time Slots"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Set the time when the player will be displayed."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Start Time"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "End Time"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Add Time"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Days"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select the days when the player will be displayed."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Time Slots"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Dates"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select the dates when the player will be displayed."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Date Time Slots"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Skins"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Controls"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Appearance"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Previous step"
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "Back"
-msgstr ""
-
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Next step"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Next"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Live Preview"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Listen Live"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Add New Player - Radio Player"
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "Edit Player"
-msgstr ""
-
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "All Players - Radio Player"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Updated!"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Player has been updated."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Error!"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Something went wrong."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Deleted!"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Player has been deleted."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "General Settings"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "Resume Local Playback"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Enable to resume playback from the last position when playing local audio files."
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Metadata Refresh Frequency"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Never"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "30 seconds"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "1 minute"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "5 minutes"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "10 minutes"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Set the frequency to refresh the metadata of the current song title."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Metadata Scrolling Speed"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Disabled"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Slow"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Medium"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Fast"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Adjust the scrolling speed of the current song title text."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Default Volume"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Set the default initial volume level for the radio player."
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "Opened Playlist"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Enable to keep open the station playlist by default."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Playlist Height"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Full"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Custom"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Select the height of the station playlist."
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Playlist Custom Height"
-msgstr ""
-
-#: assets/js/admin.js:21
-msgid "Set the custom height of the playlist in px."
-msgstr ""
-
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Radio Player Proxy Add-on - Addon facilitates the playback of HTTP (non-SSL) radio streams on HTTPS-enabled websites. Additionally, if your website server struggles to retrieve stream data including current track title, artist, artwork, and recent play history, the plugin can fix display of the metadata."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Radio Player Ads - Addon"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enhance your online radio station with the Radio Player Ads addon, designed for seamless integration of custom audio ads, stingers, and mic-drops. Gain full control over ad placement, scheduling, and rotation to maximize listener engagement and boost revenue."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Install Now / More Details"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Proxy Settings"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enable HTTP Proxy"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Install Proxy Player Add-on"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enable the HTTP proxy to facilitate HTTP streams on HTTPS websites."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "By enabling this, you'll play HTTP streams directly via your server's proxy system. This approach reduces dependence on external servers, enhancing the speed and adaptability of your radio streams."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Proxy URL"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "HTTP Player - Addon"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "If the player isn't functioning even after enabling the HTTP player, copy the external proxy URL provided below and insert it into the input above. "
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enable Metadata Proxy"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Install HTTP Player Addon"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enable this if the station's metadata, like the song title or recent play history, isn't displayed in the player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "None"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Sticky Player Settings"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to use Sticky Player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to customize the sticky player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select the player to display as the sticky player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Sticky Player Style"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to customize the sticky player style."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Fullwidth"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Mini Fullwidth"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Floating"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select the sticky player style."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Sticky Player Position"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Top"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Bottom"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Set the fullwidth sticky player position."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Floating Position"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Top Left"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Top Right"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Bottom Left"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Bottom Right"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Set the floating sticky player position."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Draggable Floating Player"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to make the floating player draggable."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Make the floating sticky player draggable to let your users move it around the screen."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Display On Mobile"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to use the sticky player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Display the sticky player on mobile devices."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Exclude Pages"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select the posts/pages, where the sticky player will be hidden."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Exclude All : "
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to use Sticky Player"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Except : "
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "When Excluded All, the sticky player will only show on the exceptions posts/pages."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Minimized Player Image"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Show the image when the sticky player is in minimized state."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Statistics Settings"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enable Statistics"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enable/disable the radio players playing statistics."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enable Email Report"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enable/disable the statistics email reporting."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Reporting Email"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enter the email to receive the player statistics report."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Email Report Interval"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select the email reporting interval."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Radio Player Settings"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Add custom CSS for the Radio Players."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Popup Settings"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Always Popup"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Turn it ON to play the player always in the popup window when the user clicks on the play button."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Customize Popup Player Size"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to customize the popup player size."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Turn ON to customize the popup player width and height."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Popup Player Size"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Player Height"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Popup Triggers"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select the elements that will trigger the popup player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Element Selector"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to use the Popup Player."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Add New Trigger"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Popup Header Content"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Add any custom content to the popup header. You can use HTML tags."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Popup Footer Content"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Add any custom content to the popup footer. You can use HTML tags."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Ads Player Settings"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Pre-roll ads interval"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "3"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "5"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "10"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "Custom"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Select the pre-roll ad interval, how often the ad will be played after user clicked the play button of the given number ."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Custom Pre-roll Ads Interval"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enter the duration (in seconds) for the custom mid-roll interval. Ads will play at the specified interval, repeating after the set number of seconds."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Mid-roll Ads Interval"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Every 5 minutes"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Every 10 minutes"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Every 15 minutes"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Every 30 minutes"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select the mid-roll ad interval, how often the ad will be played after every minutes."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Custom Mid-roll Ads Interval"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enter the number of seconds for the custom mid-roll interval. Ads will play at the specified interval after every set number of seconds."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Show Skip Button"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Show/ hide the ad skip button while the ad is playing."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Email Reporting"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Enable/ disable the ad stats email reporting to the advertiser email and to the admin email."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Email Reporting Frequency"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select how often the ads stats email report will be sent to the advertiser and to the site admin email."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Tools"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Export Data"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Players"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Export All ( Players, Settings )"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select the data you want to export."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Export"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Export the selected data to a JSON file."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Import Data"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Imported!"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Data imported successfully."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Select the exported JSON file you would like to import. Please note that the import will replace the current data"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Reset Settings"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "We recommend you to export your current settings before resetting them."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Reset"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Reset all settings to default."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "Opened Playlist"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Enable to keep open the station playlist by default."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Playlist Height"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Full"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Select the height of the station playlist."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Playlist Custom Height"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Set the custom height of the playlist in px."
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Settings saved successfully"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Popup Player Settings"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
+msgid "Playlist Settings"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Radio Player Statistics"
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "From"
+#: assets/js/admin.js:42
+msgid "Filter"
 msgstr ""
 
-#: assets/js/admin.js:21
-msgid "To"
-msgstr ""
-
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "All statistics data has been deleted."
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Clear Statistics"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Total Plays"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Total Listeners"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Play Count / Day"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Last 7 days"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "Last 30 days"
 msgstr ""
 
-#: assets/js/admin.js:21
+#: assets/js/admin.js:42
 msgid "View full statistics"
 msgstr ""
 

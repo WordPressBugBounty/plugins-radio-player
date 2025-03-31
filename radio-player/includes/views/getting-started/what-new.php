@@ -1,6 +1,22 @@
 <?php
 
 $logs = [
+	'v2.0.86' => [
+		'date'        => '31 March, 2025',
+		'new'         => [
+			'Added New Player Skin 12.',
+			'Added autoplay functionality for the player.',
+			'Added resume playback option for local files.',
+			'Added playback progress bar for local files.',
+			'Added metadata display support for local files.',
+		],
+		'fix'         => [
+			'Fixed responsive issues with player skins.',
+		],
+		'enhancement' => [
+			'Improved the statistics page for better usability.',
+		]
+	],
 	'v2.0.82' => [
 		'date' => '11 November, 2024',
 		'new'  => [

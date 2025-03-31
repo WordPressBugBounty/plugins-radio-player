@@ -4,7 +4,7 @@ Tags: radio player, shoutcast, icecast, stream, audio
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 2.0.85
+Stable tag: 2.0.86
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -247,6 +247,15 @@ Yes, the radio player is compatible with mobile devices and supports mobile medi
 9. Compatible with any mp3, aac and any major radio providers
 
 == Changelog ==
+
+= 2.0.86 (31-03-2025) =
+* **New:** Added New Player Skin 12.
+* **New:** Added autoplay functionality for the player.
+* **New:** Added resume playback option for local files.
+* **New:** Added playback progress bar for local files.
+* **New:** Added metadata display support for local files.
+* **Fix:** Fixed responsive issues with player skins.
+* **Update:** Improved the statistics page for better usability.
 
 = 2.0.85 (17 Feb, 2025) =
 * **Fix:** Fixed Radio Player metadata fetching issue.
