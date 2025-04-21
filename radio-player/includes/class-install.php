@@ -51,6 +51,9 @@ class Radio_Player_Install {
 		$wpdb->hide_errors();
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 
+
+		$charset_collate = $wpdb->get_charset_collate();
+
 		$tables = [
 
 			// Players Table
@@ -63,20 +66,28 @@ class Radio_Player_Install {
 			created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 			updated_at DATETIME NOT NULL,
 			PRIMARY KEY  (id)
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;",
+            ) $charset_collate;",
 
-			// Statistics table
-			"CREATE TABLE IF NOT EXISTS {$wpdb->prefix}radio_player_statistics(
-         	id bigint(20) NOT NULL AUTO_INCREMENT,
-			player_id bigint(20) NOT NULL,
-         	unique_id varchar (32) NOT NULL DEFAULT '',
-			`count` bigint(20) NOT NULL DEFAULT '1',
-			user_ip varchar(128)  NOT NULL DEFAULT '',
-			created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-			updated_at DATETIME NOT NULL,
-			PRIMARY KEY  (id),
-			UNIQUE KEY `unique_id` (`unique_id`)
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;",
+			"CREATE TABLE IF NOT EXISTS {$wpdb->prefix}radio_player_statistics (
+		        id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+		        player_id VARCHAR(100) NOT NULL,
+		        station INT NOT NULL,
+		        action VARCHAR(50) NOT NULL,
+		        browser VARCHAR(100) DEFAULT '',
+		        os VARCHAR(100) DEFAULT '',
+		        device VARCHAR(100) DEFAULT '',
+		        user_id INT NULL,
+		        ip VARCHAR(100) DEFAULT '',
+		        country VARCHAR(100) DEFAULT '',
+		        page TEXT,
+		        duration INT DEFAULT 0,
+		        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+		        PRIMARY KEY (id),
+		        INDEX station_idx (station),
+		        INDEX action_idx (action),
+		        INDEX timestamp_idx (timestamp)
+		    ) $charset_collate;"
+
 
 		];
 

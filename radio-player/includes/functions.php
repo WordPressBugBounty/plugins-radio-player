@@ -58,10 +58,13 @@ function radio_player_get_settings() {
 }
 
 function radio_player_get_play_count(  $post_id  ) {
-    global $wpdb;
-    $sql = $wpdb->prepare( "SELECT SUM(`count`)  FROM {$wpdb->prefix}radio_player_statistics WHERE player_id = %d;", $post_id );
-    $count = $wpdb->get_var( $sql );
-    return intval( $count );
+    return 0;
+    //	global $wpdb;
+    //
+    //	$sql   = $wpdb->prepare( "SELECT SUM(`count`)  FROM {$wpdb->prefix}radio_player_statistics WHERE player_id = %d;", $post_id );
+    //	$count = $wpdb->get_var( $sql );
+    //
+    //	return intval( $count );
 }
 
 function radio_player_get_players(  $id = false  ) {
@@ -91,7 +94,6 @@ function radio_player_get_formatted_player(  $player  ) {
     $player['id'] = intval( $player['id'] );
     $player['status'] = filter_var( $player['status'], FILTER_VALIDATE_BOOLEAN );
     $player['config'] = maybe_unserialize( $player['config'] );
-    $player['count'] = radio_player_get_play_count( $player['id'] );
     $player['locations'] = ( !empty( $player['locations'] ) ? array_values( maybe_unserialize( $player['locations'] ) ) : [] );
     return $player;
 }
@@ -118,4 +120,78 @@ function rp_sanitize_array(  $array  ) {
         }
     }
     return $array;
+}
+
+function radio_player_parse_browser(  $userAgent  ) {
+    if ( strpos( $userAgent, 'Firefox' ) !== false ) {
+        return 'Firefox';
+    }
+    if ( strpos( $userAgent, 'OPR' ) !== false || strpos( $userAgent, 'Opera' ) !== false ) {
+        return 'Opera';
+    }
+    if ( strpos( $userAgent, 'Edg' ) !== false ) {
+        return 'Edge';
+    }
+    if ( strpos( $userAgent, 'Chrome' ) !== false ) {
+        return 'Chrome';
+    }
+    if ( strpos( $userAgent, 'Safari' ) !== false ) {
+        return 'Safari';
+    }
+    return 'Unknown';
+}
+
+function radio_player_parse_os(  $userAgent  ) {
+    if ( preg_match( '/Windows NT/i', $userAgent ) ) {
+        return 'Windows';
+    }
+    if ( preg_match( '/Mac OS X/i', $userAgent ) ) {
+        return 'macOS';
+    }
+    if ( preg_match( '/Android/i', $userAgent ) ) {
+        return 'Android';
+    }
+    if ( preg_match( '/iPhone|iPad|iPod/i', $userAgent ) ) {
+        return 'iOS';
+    }
+    if ( preg_match( '/Linux/i', $userAgent ) ) {
+        return 'Linux';
+    }
+    return 'Unknown';
+}
+
+function radio_player_parse_device(  $userAgent  ) {
+    if ( preg_match( '/Mobile|iPhone|Android/', $userAgent ) ) {
+        return 'Mobile';
+    }
+    if ( preg_match( '/iPad|Tablet/', $userAgent ) ) {
+        return 'Tablet';
+    }
+    return 'Desktop';
+}
+
+function radio_players_format_duration(  $seconds  ) {
+    $seconds = (int) $seconds;
+    if ( $seconds < 1 ) {
+        return '00:00:00';
+    }
+    $h = str_pad(
+        floor( $seconds / 3600 ),
+        2,
+        '0',
+        STR_PAD_LEFT
+    );
+    $m = str_pad(
+        floor( $seconds % 3600 / 60 ),
+        2,
+        '0',
+        STR_PAD_LEFT
+    );
+    $s = str_pad(
+        $seconds % 60,
+        2,
+        '0',
+        STR_PAD_LEFT
+    );
+    return "{$h}:{$m}:{$s}";
 }

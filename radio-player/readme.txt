@@ -2,9 +2,9 @@
 Contributors: softlab, princeahmed
 Tags: radio player, shoutcast, icecast, stream, audio
 Requires at least: 5.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 2.0.86
+Stable tag: 2.0.87
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -247,6 +247,14 @@ Yes, the radio player is compatible with mobile devices and supports mobile medi
 9. Compatible with any mp3, aac and any major radio providers
 
 == Changelog ==
+
+= 2.0.87 (21-04-2025) =
+* **New:** Added stream source type Stream URL and Local Audio selection options for the stations.
+* **New:** Added fallback current song title, artist display options.
+* **Fix:** Fixed multiple player instances playing at the same time.
+* **Fix:** Fixed Ads player add-on compatibility issue.
+* **Update:** Remapped the statistics page.
+* **Update:** Improved overall plugin performance & UI.
 
 = 2.0.86 (31-03-2025) =
 * **New:** Added New Player Skin 12.

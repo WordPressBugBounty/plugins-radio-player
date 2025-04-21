@@ -23,7 +23,7 @@ class Radio_Player_Block {
 		$id        = ! empty( $attributes['id'] ) ? $attributes['id'] : '';
 		$alignment = ! empty( $attributes['align'] ) ? $attributes['align'] : 'center';
 
-		return sprintf( '<div class="align%s">%s</div>', esc_attr($alignment), do_shortcode( "[radio_player id=$id]" ) );
+		return sprintf( '<div class="align%s">%s</div>', esc_attr( $alignment ), do_shortcode( "[radio_player id=$id]" ) );
 	}
 
 	/**

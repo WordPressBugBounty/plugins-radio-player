@@ -1,9 +1,10 @@
 import Player from "../../../src/js/player/Player";
 import {useMounted} from "../../../src/js/includes/functions";
 
-import {useState, useEffect} from '@wordpress/element';
 import {Placeholder, Spinner, PanelBody, SelectControl, ToolbarGroup, ToolbarButton} from '@wordpress/components';
 import {useBlockProps, InspectorControls, BlockControls} from '@wordpress/block-editor';
+
+const {useState, useEffect} = React;
 
 export default function Edit({attributes, setAttributes}) {
 

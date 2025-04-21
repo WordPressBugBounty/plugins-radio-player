@@ -27,15 +27,15 @@ _e( 'Radio Player Proxy Add-on allows seamless playback of HTTP radio streams on
 _e( 'Additionally, it can also fix the metadata display including current track title, artist, artwork, and recent play history in the player.', 'radio-player' );
 ?>
         </p>
-        <a href="#" class="hide_notice"><?php 
+        <a href="#" class="button button-link-delete hide_notice"><?php 
 _e( 'Never show this', 'radio-player' );
 ?></a>
-        <a href="<?php 
+        <a class="button " href="<?php 
 echo admin_url();
 ?>/plugin-install.php?fs_allow_updater_and_dialog=true&tab=plugin-information&parent_plugin_id=8684&plugin=radio-player-proxy&"><?php 
 _e( 'More Details', 'radio-player' );
 ?></a>
-        <a href="<?php 
+        <a class="button button-primary" href="<?php 
 echo esc_url( rp_fs()->get_addons_url() );
 ?>"><?php 
 _e( 'Get Now', 'radio-player' );

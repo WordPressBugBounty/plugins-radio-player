@@ -20,9 +20,9 @@ class Radio_Player_Ajax {
         // Handle admin  notice
         add_action( 'wp_ajax_radio_player_hide_review_notice', [$this, 'hide_review_notice'] );
         add_action( 'wp_ajax_radio_player_review_feedback', [$this, 'handle_review_feedback'] );
-        // Get stream data
-        add_action( 'wp_ajax_radio_player_get_stream_data', [$this, 'get_stream_data'] );
-        add_action( 'wp_ajax_nopriv_radio_player_get_stream_data', [$this, 'get_stream_data'] );
+        // Get streams data
+        add_action( 'wp_ajax_radio_player_get_streams_data', [$this, 'get_streams_data'] );
+        add_action( 'wp_ajax_nopriv_radio_player_get_streams_data', [$this, 'get_streams_data'] );
         // Get stream History
         add_action( 'wp_ajax_radio_player_get_stream_history', [$this, 'get_stream_history'] );
         add_action( 'wp_ajax_nopriv_radio_player_get_stream_history', [$this, 'get_stream_history'] );
@@ -41,17 +41,21 @@ class Radio_Player_Ajax {
         wp_send_json_success( $history );
     }
 
-    public function get_stream_data() {
+    public function get_streams_data() {
         // Check nonce
         if ( !check_ajax_referer( 'radio-player', 'nonce', false ) ) {
             wp_send_json_error( __( 'Invalid nonce', 'radio-player' ) );
         }
-        $url = ( !empty( $_REQUEST['url'] ) ? esc_url( $_REQUEST['url'] ) : '' );
-        if ( empty( $url ) ) {
+        $streams = ( !empty( $_REQUEST['streams'] ) ? array_filter( array_map( 'esc_url', $_REQUEST['streams'] ) ) : [] );
+        if ( empty( $streams ) ) {
             wp_send_json_error( __( 'No URL provided!', 'radio-player' ) );
         }
-        $prev_title = ( !empty( $_REQUEST['prev_title'] ) ? sanitize_text_field( $_REQUEST['prev_title'] ) : '' );
-        $stream_data = Radio_Player_Stream_Data::instance( $url, $prev_title )->get_stream_data();
+        $stream_data = [];
+        foreach ( $streams as $stream ) {
+            $stream_instance = new Radio_Player_Stream_Data($stream);
+            $data = $stream_instance->get_stream_data();
+            $stream_data[$stream] = $data;
+        }
         wp_send_json_success( $stream_data );
     }
 

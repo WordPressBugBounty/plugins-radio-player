@@ -16,6 +16,7 @@ class Radio_Player_Admin {
         add_action( 'wp_ajax_rp_dismiss_offer_notice', [$this, 'dismiss_offer_notice'] );
         // Hide proxy player addon notice
         add_action( 'wp_ajax_rp_hide_radio_player_proxy_addon_notice', [$this, 'hide_proxy_player_addon_notice'] );
+        add_action( 'wp_ajax_rp_hide_radio_player_ads_update_notice', [$this, 'hide_ads_update_notice'] );
     }
 
     public function hide_proxy_player_addon_notice() {
@@ -23,7 +24,23 @@ class Radio_Player_Admin {
         wp_send_json_success();
     }
 
+    public function hide_ads_update_notice() {
+        update_option( 'radio_player_ads_notice', 'off' );
+        wp_send_json_success();
+    }
+
     public function display_notices() {
+        if ( !current_user_can( 'manage_options' ) ) {
+            return;
+        }
+        // Ads Player Update Notice
+        if ( defined( 'RADIO_PLAYER_ADS_VERSION' ) && version_compare( RADIO_PLAYER_ADS_VERSION, '1.0.7', '<' ) ) {
+            ob_start();
+            include RADIO_PLAYER_INCLUDES . '/views/notice/radio-player-ads-update.php';
+            $notice_html = ob_get_clean();
+            radio_player()->add_notice( 'warning  radio-player-ads-update-notice', $notice_html );
+            return;
+        }
         // Offer Notice
         $offer = $this->get_offer_notice();
         if ( !empty( $offer ) ) {

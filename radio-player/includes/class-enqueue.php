@@ -81,7 +81,7 @@ class Radio_Player_Enqueue {
         wp_style_add_data( 'radio-player-admin', 'rtl', 'replace' );
         /**---- admin scripts -----*/
         $deps = array('wp-element', 'wp-components', 'wp-util');
-        $page = $_GET['page'] ?? '';
+        $page = ( isset( $_GET['page'] ) ? $_GET['page'] : '' );
         wp_register_script(
             'sweetalert2',
             RADIO_PLAYER_ASSETS . '/vendor/sweetalert2/sweetalert2.min.js',

@@ -246,7 +246,7 @@ class Radio_Player_Stream_Data {
     }
 
     public static function instance( $url ) {
-        if ( null === self::$instance ) {
+        if ( null === self::$instance || self::$instance->url != $url ) {
             self::$instance = new self($url);
         }
         return self::$instance;

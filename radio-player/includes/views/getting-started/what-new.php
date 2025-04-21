@@ -1,6 +1,21 @@
 <?php
 
 $logs = [
+	'v2.0.87' => [
+		'date'        => '21 April, 2025',
+		'new'         => [
+			'Added stream source type options — Stream URL and Local Audio — for stations.',
+			' Introduced fallback display options for current song title and artist.',
+		],
+		'fix'         => [
+			'Resolved issue with multiple player instances playing simultaneously.',
+			'Ensured compatibility with the Ads Player add-on.',
+		],
+		'enhancement' => [
+			'Remapped and enhanced the Statistics page layout.',
+			'Improved overall plugin performance and user interface.',
+		]
+	],
 	'v2.0.86' => [
 		'date'        => '31 March, 2025',
 		'new'         => [

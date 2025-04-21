@@ -47,7 +47,7 @@ class Radio_Player_Shortcode {
         $config['id'] = $id;
         // Enqueue frontend scripts
         Radio_Player_Enqueue::instance()->frontend_scripts();
-        return sprintf( '<div class="radio_player" data-player-type="%1$s"data-data="%2$s"></div>', esc_attr( $atts['player_type'] ), esc_attr( base64_encode( json_encode( $config ) ) ) );
+        return sprintf( '<div class="radio_player" data-player-type="%1$s" data-data="%2$s"></div>', esc_attr( $atts['player_type'] ), esc_attr( base64_encode( json_encode( $config ) ) ) );
     }
 
     private function is_current_time_in_range( $start, $end, $current ) {
