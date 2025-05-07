@@ -13,6 +13,7 @@ class Radio_Player_Install {
 	 * @since 1.0.0
 	 */
 	public static function activate() {
+
 		if ( ! class_exists( 'Radio_Player_Update' ) ) {
 			require_once RADIO_PLAYER_INCLUDES . '/class-update.php';
 		}
@@ -24,11 +25,17 @@ class Radio_Player_Install {
 		} else {
 			self::create_tables();
 			self::create_default_data();
+			self::flush_rewrite_rules();
 		}
 	}
 
 	public static function deactivate() {
 		self::remove_cron_event();
+	}
+
+	public static function flush_rewrite_rules() {
+		add_rewrite_rule( '^radio-player/([0-9]+)/?$', 'index.php?radio-player=$matches[1]', 'top' );
+		flush_rewrite_rules();
 	}
 
 	public static function remove_cron_event() {

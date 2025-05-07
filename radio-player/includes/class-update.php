@@ -9,7 +9,7 @@ class Radio_Player_Update {
 	 *
 	 * @var array
 	 */
-	private static $upgrades = array( '2.0.4', '2.0.5', '2.0.87' );
+	private static $upgrades = array( '2.0.4', '2.0.5', '2.0.87', '2.0.88' );
 
 	public function installed_version() {
 		return get_option( 'radio_player_version' );
@@ -66,7 +66,6 @@ class Radio_Player_Update {
 			}
 		}
 
-		delete_option( 'radio_player_version' );
 		update_option( 'radio_player_version', RADIO_PLAYER_VERSION );
 	}
 

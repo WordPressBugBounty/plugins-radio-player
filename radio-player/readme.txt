@@ -4,7 +4,7 @@ Tags: radio player, shoutcast, icecast, stream, audio
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 2.0.87
+Stable tag: 2.0.88
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -248,6 +248,11 @@ Yes, the radio player is compatible with mobile devices and supports mobile medi
 
 == Changelog ==
 
+= 2.0.88 (07-05-2025) =
+* **New:** Added an option to play all player streams in sticky player mode.
+* **New:** Introduced custom triggers for the sticky player.
+* **Fix:** Resolved dashboard statistics widget was not displaying data.
+
 = 2.0.87 (21-04-2025) =
 * **New:** Added stream source type Stream URL and Local Audio selection options for the stations.
 * **New:** Added fallback current song title, artist display options.
@@ -409,7 +414,7 @@ Yes, the radio player is compatible with mobile devices and supports mobile medi
 * Update: Improved the statistics page.
 * Update: Improved the getting-started page.
 * Update: Improved responsive design.
-* Fix: Fixed full-width player playlist.
+* Fix: Fixed sticky player playlist.
 
 = 1.0.9 =
 * New: Added proxy metadata settings to fix the metadata title not showing issue.

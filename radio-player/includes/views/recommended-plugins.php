@@ -70,7 +70,7 @@ $data = plugins_api( 'plugin_information', $args );
 
 if ( $data && ! is_wp_error( $data ) ) {
 	$recommendedPlugins['integrate-google-drive']                    = $data;
-	$recommendedPlugins['integrate-google-drive']->name              = 'Integrate Google Drive – Browse, Upload, Download, Embed, Play, and Share Your Google Drive Files Into Your WordPress Site';
+	$recommendedPlugins['integrate-google-drive']->name              = 'Integrate Google Drive';
 	$recommendedPlugins['integrate-google-drive']->short_description = 'Integrate Google Drive – is the best and easy-to-use Google Drive cloud solution plugin for WordPress to integrate your Google Drive documents and media files directly into your WordPress Website.';
 }
 
@@ -89,8 +89,26 @@ $data = plugins_api( 'plugin_information', $args );
 
 if ( $data && ! is_wp_error( $data ) ) {
 	$recommendedPlugins['dracula-dark-mode']                    = $data;
-	$recommendedPlugins['dracula-dark-mode']->name              = 'Dracula Dark Mode – The Revolutionary Dark Mode Plugin For WordPress';
+	$recommendedPlugins['dracula-dark-mode']->name              = 'Dracula Dark Mode';
 	$recommendedPlugins['dracula-dark-mode']->short_description = 'Dracula Dark Mode is a highly customizable and easy-to-use dark mode plugin for WordPress. It offers an elegant dark mode version of your website, reducing eye strain for your visitors.';
+}
+
+/* Essential Addons for Contact Form 7 */
+$args = [
+    'slug'   => 'essential-addons-for-contact-form-7',
+    'fields' => [
+        'short_description' => true,
+        'icons'             => true,
+        'reviews'           => false, // excludes all reviews
+    ],
+];
+
+$data = plugins_api( 'plugin_information', $args );
+
+if ( $data && ! is_wp_error( $data ) ) {
+    $recommendedPlugins['essential-addons-for-contact-form-7']                    = $data;
+    $recommendedPlugins['essential-addons-for-contact-form-7']->name              = 'Essential Addons for Contact Form 7';
+    $recommendedPlugins['essential-addons-for-contact-form-7']->short_description = 'Offers 30+ fields and 20+ features to build advanced, multi-step forms with conditional logic, column layouts, and more to help you create beautiful and highly functional forms.';
 }
 
 /* Podcast Box */
@@ -107,7 +125,7 @@ $data = plugins_api( 'plugin_information', $args );
 
 if ( $data && ! is_wp_error( $data ) ) {
     $recommendedPlugins['podcast-box']                    = $data;
-    $recommendedPlugins['podcast-box']->name              = 'Podcast Box – Podcast Player for WordPress';
+    $recommendedPlugins['podcast-box']->name              = 'Podcast Box';
     $recommendedPlugins['podcast-box']->short_description = 'Podcast Box is all in one solution that provides you an easy way to show and play your podcast episodes. You can also make a worldwide podcasts directory website of 5000+ podcasts included from 70+ countries.';
 }
 

@@ -76,7 +76,7 @@ class Radio_Player_Update_2_0_87 {
 		        INDEX station_idx (station),
 		        INDEX action_idx (action),
 		        INDEX timestamp_idx (timestamp)
-    ) $charset_collate;";
+    			) $charset_collate;";
 
 		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 		dbDelta( $sql );

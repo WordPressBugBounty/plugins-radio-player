@@ -11,6 +11,9 @@ class Radio_Player_Enqueue {
      * Radio_Player_Enqueue constructor.
      */
     public function __construct() {
+        if ( !empty( radio_player_get_setting( 'stickyTriggers' ) ) ) {
+            add_action( 'wp_enqueue_scripts', [$this, 'frontend_scripts'] );
+        }
         add_action( 'admin_enqueue_scripts', [$this, 'admin_enqueue'] );
     }
 
@@ -94,10 +97,10 @@ class Radio_Player_Enqueue {
             wp_enqueue_media();
         }
         if ( 'radio-player-settings' == $page ) {
-            //tinymce editor
+            // Tinymce editor
             wp_enqueue_media();
             wp_enqueue_editor();
-            //code editor
+            // Code editor
             wp_enqueue_script( 'wp-theme-plugin-editor' );
             wp_enqueue_style( 'wp-codemirror' );
             wp_enqueue_code_editor( array(
@@ -121,7 +124,7 @@ class Radio_Player_Enqueue {
             true
         );
         $deps[] = 'radio-player-hls';
-        //radio player admin
+        // Radio player admin
         wp_enqueue_script(
             'radio-player-admin',
             RADIO_PLAYER_ASSETS . '/js/admin.js',
@@ -130,7 +133,7 @@ class Radio_Player_Enqueue {
             true
         );
         wp_localize_script( 'radio-player-admin', 'radioPlayer', $this->get_localized_data() );
-        // set js translation text-domain
+        // Set js translation text-domain
         wp_set_script_translations( 'radio-player-admin', 'radio-player', RADIO_PLAYER_PATH . '/languages' );
     }
 
@@ -152,6 +155,10 @@ class Radio_Player_Enqueue {
             $data['upgrade_url'] = rp_fs()->get_upgrade_url();
             $data['addons_url'] = rp_fs()->get_addons_url();
             $data['showReviewPopup'] = current_user_can( 'manage_options' ) && 'off' != get_option( 'radio_player_rating_notice' ) && 'off' != get_transient( 'radio_player_rating_notice_interval' );
+        } else {
+            if ( !empty( radio_player_get_setting( 'stickyTriggers' ) ) ) {
+                $data['players'] = radio_player_get_players();
+            }
         }
         return $data;
     }

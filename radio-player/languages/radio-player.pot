@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Radio Player plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Radio Player 2.0.87\n"
+"Project-Id-Version: Radio Player 2.0.88\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/radio-player\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-21T11:59:40+00:00\n"
+"POT-Creation-Date: 2025-05-07T08:13:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: radio-player\n"
@@ -18,8 +18,8 @@ msgstr ""
 #: plugin.php
 #: elementor/class-elementor-player-widget.php:15
 #: elementor/class-elementor-player-widget.php:34
-#: includes/class-admin.php:176
 #: includes/class-admin.php:177
+#: includes/class-admin.php:178
 #: includes/views/getting-started/index.php:11
 #: assets/js/admin.js:42
 msgid "Radio Player"
@@ -77,101 +77,108 @@ msgstr ""
 msgid "Please select a player."
 msgstr ""
 
-#: includes/class-admin.php:186
+#: includes/class-admin.php:187
 #: assets/js/admin.js:42
 msgid "All Players"
 msgstr ""
 
-#: includes/class-admin.php:189
+#: includes/class-admin.php:190
 msgid "Getting Started - Radio Player"
 msgstr ""
 
-#: includes/class-admin.php:189
+#: includes/class-admin.php:190
 #: includes/views/getting-started/index.php:14
 msgid "Getting Started"
 msgstr ""
 
-#: includes/class-admin.php:197
+#: includes/class-admin.php:198
 msgid "Statistics - Radio Player"
 msgstr ""
 
-#: includes/class-admin.php:197
+#: includes/class-admin.php:198
 #: includes/views/statistics.php:5
 msgid "Statistics"
 msgstr ""
 
-#: includes/class-admin.php:205
+#: includes/class-admin.php:206
 msgid "Settings - Radio Player"
 msgstr ""
 
-#: includes/class-admin.php:205
+#: includes/class-admin.php:206
 #: assets/js/admin.js:42
 msgid "Settings"
 msgstr ""
 
-#: includes/class-admin.php:214
 #: includes/class-admin.php:215
+#: includes/class-admin.php:216
 msgid "Recommended Plugins"
 msgstr ""
 
-#: includes/class-ajax.php:46
-#: includes/class-ajax.php:64
-#: includes/class-ajax.php:89
-#: includes/class-ajax.php:98
-#: includes/class-ajax.php:129
-#: includes/class-ajax.php:163
-#: includes/class-ajax.php:192
-#: includes/class-ajax.php:247
-#: includes/class-ajax.php:259
-#: includes/class-ajax.php:305
-#: includes/class-ajax.php:325
+#: includes/class-ajax.php:53
+#: includes/class-ajax.php:94
+#: includes/class-ajax.php:122
+#: includes/class-ajax.php:140
+#: includes/class-ajax.php:165
+#: includes/class-ajax.php:174
+#: includes/class-ajax.php:205
+#: includes/class-ajax.php:239
+#: includes/class-ajax.php:268
+#: includes/class-ajax.php:323
+#: includes/class-ajax.php:335
+#: includes/class-ajax.php:381
+#: includes/class-ajax.php:401
+#: includes/class-statistics__premium_only.php:27
 msgid "Invalid nonce"
 msgstr ""
 
-#: includes/class-ajax.php:52
+#: includes/class-ajax.php:58
+msgid "Permission denied."
+msgstr ""
+
+#: includes/class-ajax.php:128
 msgid "No URL Provided!"
 msgstr ""
 
-#: includes/class-ajax.php:70
+#: includes/class-ajax.php:146
 msgid "No URL provided!"
 msgstr ""
 
 #. translators: %s: User feedback
-#: includes/class-ajax.php:106
+#: includes/class-ajax.php:182
 msgid "Feedback: %s"
 msgstr ""
 
 #. translators: %s: Website URL
-#: includes/class-ajax.php:109
+#: includes/class-ajax.php:185
 msgid "Website URL: %s"
 msgstr ""
 
 #. translators: %s: Plugin name
-#: includes/class-ajax.php:111
+#: includes/class-ajax.php:187
 msgid "Feedback for %s"
 msgstr ""
 
-#: includes/class-ajax.php:134
+#: includes/class-ajax.php:210
 msgid "You do not have permission to import data"
 msgstr ""
 
-#: includes/class-ajax.php:168
+#: includes/class-ajax.php:244
 msgid "You do not have permission to export data"
 msgstr ""
 
-#: includes/class-ajax.php:197
+#: includes/class-ajax.php:273
 msgid "You do not have permission to get players"
 msgstr ""
 
-#: includes/class-ajax.php:252
+#: includes/class-ajax.php:328
 msgid "You do not have permission to update this player"
 msgstr ""
 
-#: includes/class-ajax.php:309
+#: includes/class-ajax.php:385
 msgid "You do not have permission to delete this player"
 msgstr ""
 
-#: includes/class-ajax.php:330
+#: includes/class-ajax.php:406
 msgid "You do not have permission to update settings"
 msgstr ""
 
@@ -189,163 +196,172 @@ msgid_plural " %s days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/class-statistics__premium_only.php:23
+#: includes/class-hooks.php:57
+msgid "Invalid player ID."
+msgstr ""
+
+#: includes/class-statistics__premium_only.php:31
+#: includes/class-statistics__premium_only.php:43
 msgid "You do not have permission to perform this action"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:41
-#: includes/class-statistics__premium_only.php:266
-#: includes/class-statistics__premium_only.php:310
-#: includes/class-statistics__premium_only.php:400
+#: includes/class-statistics__premium_only.php:37
+msgid "Statistics cleared successfully"
+msgstr ""
+
+#: includes/class-statistics__premium_only.php:61
+#: includes/class-statistics__premium_only.php:286
+#: includes/class-statistics__premium_only.php:330
+#: includes/class-statistics__premium_only.php:420
 msgid "User ID"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:42
-#: includes/class-statistics__premium_only.php:311
+#: includes/class-statistics__premium_only.php:62
+#: includes/class-statistics__premium_only.php:331
 #: assets/js/admin.js:42
 msgid "Name"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:43
-#: includes/class-statistics__premium_only.php:312
+#: includes/class-statistics__premium_only.php:63
+#: includes/class-statistics__premium_only.php:332
 msgid "IP"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:44
-#: includes/class-statistics__premium_only.php:80
-#: includes/class-statistics__premium_only.php:267
-#: includes/class-statistics__premium_only.php:313
-#: includes/class-statistics__premium_only.php:326
-#: includes/class-statistics__premium_only.php:401
+#: includes/class-statistics__premium_only.php:64
+#: includes/class-statistics__premium_only.php:100
+#: includes/class-statistics__premium_only.php:287
+#: includes/class-statistics__premium_only.php:333
+#: includes/class-statistics__premium_only.php:346
+#: includes/class-statistics__premium_only.php:421
 msgid "Country"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:45
-#: includes/class-statistics__premium_only.php:82
-#: includes/class-statistics__premium_only.php:118
-#: includes/class-statistics__premium_only.php:154
-#: includes/class-statistics__premium_only.php:190
-#: includes/class-statistics__premium_only.php:227
-#: includes/class-statistics__premium_only.php:314
-#: includes/class-statistics__premium_only.php:328
-#: includes/class-statistics__premium_only.php:342
-#: includes/class-statistics__premium_only.php:356
-#: includes/class-statistics__premium_only.php:370
-#: includes/class-statistics__premium_only.php:383
+#: includes/class-statistics__premium_only.php:65
+#: includes/class-statistics__premium_only.php:102
+#: includes/class-statistics__premium_only.php:138
+#: includes/class-statistics__premium_only.php:174
+#: includes/class-statistics__premium_only.php:210
+#: includes/class-statistics__premium_only.php:247
+#: includes/class-statistics__premium_only.php:334
+#: includes/class-statistics__premium_only.php:348
+#: includes/class-statistics__premium_only.php:362
+#: includes/class-statistics__premium_only.php:376
+#: includes/class-statistics__premium_only.php:390
+#: includes/class-statistics__premium_only.php:403
 #: includes/views/email-report.php:124
 #: assets/js/admin.js:42
 msgid "Total Plays"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:46
-#: includes/class-statistics__premium_only.php:83
-#: includes/class-statistics__premium_only.php:119
-#: includes/class-statistics__premium_only.php:155
-#: includes/class-statistics__premium_only.php:191
-#: includes/class-statistics__premium_only.php:228
-#: includes/class-statistics__premium_only.php:315
-#: includes/class-statistics__premium_only.php:329
-#: includes/class-statistics__premium_only.php:343
-#: includes/class-statistics__premium_only.php:357
-#: includes/class-statistics__premium_only.php:371
-#: includes/class-statistics__premium_only.php:384
+#: includes/class-statistics__premium_only.php:66
+#: includes/class-statistics__premium_only.php:103
+#: includes/class-statistics__premium_only.php:139
+#: includes/class-statistics__premium_only.php:175
+#: includes/class-statistics__premium_only.php:211
+#: includes/class-statistics__premium_only.php:248
+#: includes/class-statistics__premium_only.php:335
+#: includes/class-statistics__premium_only.php:349
+#: includes/class-statistics__premium_only.php:363
+#: includes/class-statistics__premium_only.php:377
+#: includes/class-statistics__premium_only.php:391
+#: includes/class-statistics__premium_only.php:404
 #: includes/views/email-report.php:154
 msgid "Total Duration"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:81
-#: includes/class-statistics__premium_only.php:117
-#: includes/class-statistics__premium_only.php:153
-#: includes/class-statistics__premium_only.php:189
-#: includes/class-statistics__premium_only.php:226
-#: includes/class-statistics__premium_only.php:327
-#: includes/class-statistics__premium_only.php:341
-#: includes/class-statistics__premium_only.php:355
-#: includes/class-statistics__premium_only.php:369
-#: includes/class-statistics__premium_only.php:382
+#: includes/class-statistics__premium_only.php:101
+#: includes/class-statistics__premium_only.php:137
+#: includes/class-statistics__premium_only.php:173
+#: includes/class-statistics__premium_only.php:209
+#: includes/class-statistics__premium_only.php:246
+#: includes/class-statistics__premium_only.php:347
+#: includes/class-statistics__premium_only.php:361
+#: includes/class-statistics__premium_only.php:375
+#: includes/class-statistics__premium_only.php:389
+#: includes/class-statistics__premium_only.php:402
 msgid "Total Users"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:116
-#: includes/class-statistics__premium_only.php:340
+#: includes/class-statistics__premium_only.php:136
+#: includes/class-statistics__premium_only.php:360
 msgid "Browser"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:152
-#: includes/class-statistics__premium_only.php:354
+#: includes/class-statistics__premium_only.php:172
+#: includes/class-statistics__premium_only.php:374
 msgid "Device"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:188
-#: includes/class-statistics__premium_only.php:225
-#: includes/class-statistics__premium_only.php:262
-#: includes/class-statistics__premium_only.php:368
-#: includes/class-statistics__premium_only.php:381
-#: includes/class-statistics__premium_only.php:396
+#: includes/class-statistics__premium_only.php:208
+#: includes/class-statistics__premium_only.php:245
+#: includes/class-statistics__premium_only.php:282
+#: includes/class-statistics__premium_only.php:388
+#: includes/class-statistics__premium_only.php:401
+#: includes/class-statistics__premium_only.php:416
 #: includes/views/email-report.php:46
 #: includes/views/email-report.php:85
 #: assets/js/admin.js:42
 msgid "Player"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:224
-#: includes/class-statistics__premium_only.php:263
-#: includes/class-statistics__premium_only.php:380
-#: includes/class-statistics__premium_only.php:397
+#: includes/class-statistics__premium_only.php:244
+#: includes/class-statistics__premium_only.php:283
+#: includes/class-statistics__premium_only.php:400
+#: includes/class-statistics__premium_only.php:417
 #: includes/views/email-report.php:84
 #: assets/js/admin.js:42
 msgid "Station"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:261
-#: includes/class-statistics__premium_only.php:395
+#: includes/class-statistics__premium_only.php:281
+#: includes/class-statistics__premium_only.php:415
 msgid "Action"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:264
-#: includes/class-statistics__premium_only.php:398
+#: includes/class-statistics__premium_only.php:284
+#: includes/class-statistics__premium_only.php:418
 msgid "Page"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:265
-#: includes/class-statistics__premium_only.php:399
+#: includes/class-statistics__premium_only.php:285
+#: includes/class-statistics__premium_only.php:419
 msgid "User IP"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:268
-#: includes/class-statistics__premium_only.php:402
+#: includes/class-statistics__premium_only.php:288
+#: includes/class-statistics__premium_only.php:422
 msgid "Duration"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:269
-#: includes/class-statistics__premium_only.php:403
+#: includes/class-statistics__premium_only.php:289
+#: includes/class-statistics__premium_only.php:423
 #: includes/views/email-report.php:123
 #: includes/views/email-report.php:153
 msgid "Date"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:297
+#: includes/class-statistics__premium_only.php:317
 msgid "Invalid export type"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:509
+#: includes/class-statistics__premium_only.php:529
 msgid "Invalid date range."
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:583
-#: includes/class-statistics__premium_only.php:790
+#: includes/class-statistics__premium_only.php:603
+#: includes/class-statistics__premium_only.php:814
 msgid "Anonymous"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:925
+#: includes/class-statistics__premium_only.php:949
 msgid "Missing required fields."
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:951
+#: includes/class-statistics__premium_only.php:975
 msgid "Log saved"
 msgstr ""
 
-#: includes/class-statistics__premium_only.php:956
+#: includes/class-statistics__premium_only.php:990
 msgid "Radio Player Stats"
 msgstr ""
 
@@ -1353,20 +1369,20 @@ msgstr ""
 msgid "Get Now"
 msgstr ""
 
-#: includes/views/recommended-plugins.php:118
+#: includes/views/recommended-plugins.php:136
 msgid "Try out our recommended plugins"
 msgstr ""
 
-#: includes/views/recommended-plugins.php:119
+#: includes/views/recommended-plugins.php:137
 msgid "Hide From Menu"
 msgstr ""
 
-#: includes/views/recommended-plugins.php:432
+#: includes/views/recommended-plugins.php:450
 #: assets/js/admin.js:42
 msgid "Are you sure?"
 msgstr ""
 
-#: includes/views/recommended-plugins.php:433
+#: includes/views/recommended-plugins.php:451
 msgid "If you hide the recommended plugins page from your menu, it won't appear there again. Are you sure you'd like to do it?"
 msgstr ""
 
@@ -1382,16 +1398,94 @@ msgstr ""
 msgid "Upgrade to Pro and get access to the stats."
 msgstr ""
 
-#: plugin.php:15
-msgid "You can't access this page"
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "OFFLINE"
 msgstr ""
 
-#: plugin.php:105
-msgid "\"%1$s\" - addon is deactivated. Please update your %1$s addon plugin to the latest version (v%2$s)"
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "LIVE"
 msgstr ""
 
-#: plugin.php:107
-msgid "1.0.1"
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "Expand Player"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "Minimize Player"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "No history found!"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "Close Sidebar"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "Search"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "Playlist"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "Toggle Sidebar"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "Sort by:"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "A to Z"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "Z to A"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "Stations"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "History"
+msgstr ""
+
+#: assets/js/admin.js:42
+#: assets/js/frontend.js:21
+#: block/build/radio-player/index.js:1
+msgid "Drag to move player"
 msgstr ""
 
 #: assets/js/admin.js:42
@@ -1455,6 +1549,22 @@ msgid "Skin 12"
 msgstr ""
 
 #: assets/js/admin.js:42
+msgid "Select a Page"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Select a page to embed the shortcode."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Please select a page."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Let's Go"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Back"
 msgstr ""
 
@@ -1471,19 +1581,19 @@ msgid "Enter Player Title"
 msgstr ""
 
 #: assets/js/admin.js:42
-msgid "Copy shortcode"
+msgid "Shortcode Actions"
 msgstr ""
 
 #: assets/js/admin.js:42
-msgid "Save"
+msgid "View"
 msgstr ""
 
 #: assets/js/admin.js:42
-msgid "Saved"
+msgid "Embed"
 msgstr ""
 
 #: assets/js/admin.js:42
-msgid "Preview"
+msgid "Copy Shortcode"
 msgstr ""
 
 #: assets/js/admin.js:42
@@ -1511,23 +1621,35 @@ msgid "Upgrade to PRO to embed the player on any website or page."
 msgstr ""
 
 #: assets/js/admin.js:42
-msgid "PRO feature."
+msgid "Embed in Page"
 msgstr ""
 
 #: assets/js/admin.js:42
-msgid "You won't be able to revert this!"
+msgid "Select Existing Page"
 msgstr ""
 
 #: assets/js/admin.js:42
-msgid "Yes, delete it!"
+msgid "Create New Page"
 msgstr ""
 
 #: assets/js/admin.js:42
-msgid "No, cancel!"
+msgid "Enter the title for the new page."
 msgstr ""
 
 #: assets/js/admin.js:42
-msgid "Delete"
+msgid "Enter page title"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Failed to create page."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Save"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Saved"
 msgstr ""
 
 #: assets/js/admin.js:42
@@ -1605,6 +1727,14 @@ msgid "You will not be able to recover this shortcode!"
 msgstr ""
 
 #: assets/js/admin.js:42
+msgid "Yes, delete it!"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Delete"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Title"
 msgstr ""
 
@@ -1658,6 +1788,14 @@ msgstr ""
 
 #: assets/js/admin.js:42
 msgid "Get Embed Code"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "You won't be able to revert this!"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "No, cancel!"
 msgstr ""
 
 #: assets/js/admin.js:42
@@ -1757,12 +1895,6 @@ msgid "Upload a station logo or image."
 msgstr ""
 
 #: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "Playlist"
-msgstr ""
-
-#: assets/js/admin.js:42
 msgid "Select or create a playlist"
 msgstr ""
 
@@ -1804,6 +1936,10 @@ msgstr ""
 
 #: assets/js/admin.js:42
 msgid "Upgrade to PRO to use this skin"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Preview"
 msgstr ""
 
 #: assets/js/admin.js:42
@@ -1964,12 +2100,6 @@ msgstr ""
 
 #: assets/js/admin.js:42
 msgid "The recent play history might not be available for all streams."
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "Stations"
 msgstr ""
 
 #: assets/js/admin.js:42
@@ -2229,84 +2359,6 @@ msgid "Date Time Slots"
 msgstr ""
 
 #: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "OFFLINE"
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "LIVE"
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "Expand Player"
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "Minimize Player"
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "No history found!"
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "Close Sidebar"
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "Search"
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "Toggle Sidebar"
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "Sort by:"
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "A to Z"
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "Z to A"
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "History"
-msgstr ""
-
-#: assets/js/admin.js:42
-#: assets/js/frontend.js:21
-#: block/build/radio-player/index.js:1
-msgid "Drag to move player"
-msgstr ""
-
-#: assets/js/admin.js:42
 msgid "Skins"
 msgstr ""
 
@@ -2515,11 +2567,31 @@ msgid "Sticky Player Settings"
 msgstr ""
 
 #: assets/js/admin.js:42
+msgid "Always Play in Sticky"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Upgrade to PRO to use the sticky player feature."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Enable this option to play all streams using the sticky player automatically."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Default Sticky Player"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Upgrade to PRO to use Sticky Player."
 msgstr ""
 
 #: assets/js/admin.js:42
 msgid "Upgrade to PRO to customize the sticky player."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Select the default sticky player to use."
 msgstr ""
 
 #: assets/js/admin.js:42
@@ -2647,6 +2719,26 @@ msgid "Show the image when the sticky player is in minimized state."
 msgstr ""
 
 #: assets/js/admin.js:42
+msgid "Sticky Triggers"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Select the elements that will trigger the sticky player."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Element Selector"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Upgrade to PRO to use the Popup Player."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Add New Trigger"
+msgstr ""
+
+#: assets/js/admin.js:42
 msgid "Statistics Settings"
 msgstr ""
 
@@ -2656,6 +2748,14 @@ msgstr ""
 
 #: assets/js/admin.js:42
 msgid "Enable/disable the radio players playing statistics."
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Enable Dashboard Widget"
+msgstr ""
+
+#: assets/js/admin.js:42
+msgid "Enable/disable the Dashboard statistics widget."
 msgstr ""
 
 #: assets/js/admin.js:42
@@ -2728,18 +2828,6 @@ msgstr ""
 
 #: assets/js/admin.js:42
 msgid "Select the elements that will trigger the popup player."
-msgstr ""
-
-#: assets/js/admin.js:42
-msgid "Element Selector"
-msgstr ""
-
-#: assets/js/admin.js:42
-msgid "Upgrade to PRO to use the Popup Player."
-msgstr ""
-
-#: assets/js/admin.js:42
-msgid "Add New Trigger"
 msgstr ""
 
 #: assets/js/admin.js:42

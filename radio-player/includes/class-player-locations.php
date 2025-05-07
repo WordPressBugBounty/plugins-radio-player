@@ -25,8 +25,6 @@ class Radio_Player_Locations {
 			return;
 		}
 
-		error_log( 'save_post_a');
-
 		$player_ids = $this->get_player_ids( $post->post_content );
 
 		$this->update_shortcode_locations( $post, [], $player_ids );

@@ -1,6 +1,16 @@
 <?php
 
 $logs = [
+	'v2.0.88' => [
+		'date'        => '07 May, 2025',
+		'new'         => [
+			'Added an option to play all player streams in sticky player mode.',
+			'Introduced custom triggers for the sticky player.',
+		],
+		'fix'         => [
+			'Resolved dashboard statistics widget was not displaying data.',
+		],
+	],
 	'v2.0.87' => [
 		'date'        => '21 April, 2025',
 		'new'         => [

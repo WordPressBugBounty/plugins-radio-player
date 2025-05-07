@@ -17,6 +17,10 @@ class Radio_Player_Ajax {
         add_action( 'wp_ajax_rp_get_export_data', [$this, 'export_data'] );
         // Import Data
         add_action( 'wp_ajax_rp_import_data', [$this, 'import_data'] );
+        // Get Pages
+        add_action( 'wp_ajax_rp_get_pages', [$this, 'get_pages'] );
+        // Create Page
+        add_action( 'wp_ajax_rp_create_page', [$this, 'create_page'] );
         // Handle admin  notice
         add_action( 'wp_ajax_radio_player_hide_review_notice', [$this, 'hide_review_notice'] );
         add_action( 'wp_ajax_radio_player_review_feedback', [$this, 'handle_review_feedback'] );
@@ -26,6 +30,62 @@ class Radio_Player_Ajax {
         // Get stream History
         add_action( 'wp_ajax_radio_player_get_stream_history', [$this, 'get_stream_history'] );
         add_action( 'wp_ajax_nopriv_radio_player_get_stream_history', [$this, 'get_stream_history'] );
+    }
+
+    public function create_page() {
+        // Check nonce
+        if ( !check_ajax_referer( 'radio-player', 'nonce', false ) ) {
+            wp_send_json_error( __( 'Invalid nonce', 'radio-player' ) );
+        }
+        // Check permission
+        if ( !current_user_can( 'edit_pages' ) ) {
+            wp_send_json_error( __( 'Permission denied.', 'radio-player' ) );
+        }
+        $title = sanitize_text_field( $_POST['title'] ?? '' );
+        $player_id = sanitize_text_field( $_POST['id'] ?? '' );
+        $post_type = 'page';
+        // Check if block editor is enabled for this post-type
+        if ( function_exists( 'use_block_editor_for_post_type' ) && use_block_editor_for_post_type( $post_type ) ) {
+            $content = sprintf( '<!-- wp:radio-player/radio-player {"id":%d} /-->', $player_id );
+        } else {
+            $content = sprintf( '[radio_player id="%d"]', $player_id );
+        }
+        $page_id = wp_insert_post( [
+            'post_title'   => $title,
+            'post_content' => $content,
+            'post_status'  => 'draft',
+            'post_type'    => $post_type,
+        ] );
+        if ( is_wp_error( $page_id ) ) {
+            wp_send_json_error( $page_id->get_error_message() );
+        }
+        wp_send_json_success( [
+            'id'    => $page_id,
+            'title' => $title,
+        ] );
+    }
+
+    public function get_pages() {
+        // Check nonce
+        if ( !check_ajax_referer( 'radio-player', 'nonce', false ) ) {
+            wp_send_json_error( __( 'Invalid nonce', 'radio-player' ) );
+        }
+        $pages = get_posts( [
+            'post_type'      => 'page',
+            'post_status'    => 'publish',
+            'posts_per_page' => 100,
+            'fields'         => ['ID', 'post_title'],
+        ] );
+        if ( empty( $pages ) ) {
+            wp_send_json_success( [] );
+        }
+        $formatted = array_map( function ( $page ) {
+            return [
+                'id'    => $page->ID,
+                'title' => esc_html( $page->post_title ),
+            ];
+        }, $pages );
+        wp_send_json_success( $formatted );
     }
 
     public function get_stream_history() {
@@ -46,7 +106,7 @@ class Radio_Player_Ajax {
         if ( !check_ajax_referer( 'radio-player', 'nonce', false ) ) {
             wp_send_json_error( __( 'Invalid nonce', 'radio-player' ) );
         }
-        $streams = ( !empty( $_REQUEST['streams'] ) ? array_filter( array_map( 'esc_url', $_REQUEST['streams'] ) ) : [] );
+        $streams = ( !empty( $_REQUEST['streams'] ) ? array_filter( array_map( 'sanitize_text_field', $_REQUEST['streams'] ) ) : [] );
         if ( empty( $streams ) ) {
             wp_send_json_error( __( 'No URL provided!', 'radio-player' ) );
         }

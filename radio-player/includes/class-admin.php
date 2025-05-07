@@ -114,7 +114,7 @@ class Radio_Player_Admin {
 
     public function init_update() {
         if ( !class_exists( 'Radio_Player_Update' ) ) {
-            include_once RADIO_PLAYER_INCLUDES . '/class-update.php';
+            include RADIO_PLAYER_INCLUDES . '/class-update.php';
         }
         $updater = new Radio_Player_Update();
         if ( $updater->needs_update() ) {

@@ -11,16 +11,84 @@ class Radio_Player_Hooks {
     public function __construct() {
         // Render the footer sticky player
         add_action( 'wp_footer', [$this, 'render_player'] );
-        // filter query args
+        // Add rewrite rules
+        add_action( 'init', [$this, 'add_rewrite_rules'] );
+        // Filter query args
         add_filter( 'query_vars', [$this, 'add_query_vars'] );
         // Popup player
         add_action( 'template_redirect', [$this, 'render_popup_player'] );
+        // Render preview player
+        add_action( 'template_redirect', [$this, 'render_preview_player'] );
+    }
+
+    public function add_rewrite_rules() {
+        add_rewrite_rule( '^radio-player/([0-9]+)/?$', 'index.php?radio-player=$matches[1]', 'top' );
     }
 
     public function add_query_vars( $vars ) {
+        $vars[] = 'radio-player';
         $vars[] = 'radio_player';
         $vars[] = 'radio_player_play';
         return $vars;
+    }
+
+    public function render_preview_player() {
+        $player_id = get_query_var( 'radio-player' );
+        if ( !$player_id ) {
+            return;
+        }
+        $id = esc_attr( $player_id );
+        $player = radio_player_get_players( $id );
+        if ( !$player ) {
+            wp_die( esc_html__( 'Invalid player ID.', 'radio-player' ), 400 );
+        }
+        $title = $player['title'] ?? 'Radio Player';
+        // Capture the shortcode output
+        ob_start();
+        echo do_shortcode( '[radio_player id="' . $id . '"]' );
+        $post_content = ob_get_clean();
+        global $wp_query, $post;
+        // Create the fake post object
+        $fake_post_data = [
+            'ID'                => 0,
+            'post_author'       => 0,
+            'post_date'         => current_time( 'mysql' ),
+            'post_date_gmt'     => current_time( 'mysql', 1 ),
+            'post_modified'     => current_time( 'mysql' ),
+            'post_modified_gmt' => current_time( 'mysql', 1 ),
+            'post_content'      => $post_content,
+            'post_title'        => $title,
+            'post_excerpt'      => '',
+            'post_status'       => 'publish',
+            'post_type'         => 'page',
+            'post_name'         => 'igd-modules',
+            'post_parent'       => 0,
+            'guid'              => home_url( '/?radio_player=' . $id ),
+            'menu_order'        => 0,
+            'ping_status'       => 'closed',
+            'comment_status'    => 'closed',
+            'comment_count'     => 0,
+            'filter'            => 'raw',
+        ];
+        $post = new \WP_Post((object) $fake_post_data);
+        // Set global WP_Query properties
+        $wp_query->post = $post;
+        $wp_query->posts = [$post];
+        $wp_query->queried_object = $post;
+        $wp_query->queried_object_id = $post->ID;
+        $wp_query->post_count = 1;
+        $wp_query->is_page = true;
+        $wp_query->is_single = true;
+        $wp_query->is_singular = true;
+        $wp_query->is_home = false;
+        $wp_query->is_404 = false;
+        $wp_query->max_num_pages = 1;
+        // Set up postdata
+        setup_postdata( $post );
+        // Optionally remove conflicting filters (if necessary)
+        remove_all_filters( 'the_content' );
+        remove_all_filters( 'the_excerpt' );
+        remove_all_filters( 'the_title' );
     }
 
     /**
