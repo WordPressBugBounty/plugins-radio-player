@@ -73,7 +73,7 @@ class Radio_Player_Ajax {
         $pages = get_posts( [
             'post_type'      => 'page',
             'post_status'    => 'publish',
-            'posts_per_page' => 100,
+            'posts_per_page' => 999,
             'fields'         => ['ID', 'post_title'],
         ] );
         if ( empty( $pages ) ) {

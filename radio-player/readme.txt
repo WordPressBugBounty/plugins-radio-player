@@ -4,7 +4,7 @@ Tags: radio player, shoutcast, icecast, stream, audio
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 2.0.88
+Stable tag: 2.0.89
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -247,6 +247,9 @@ Yes, the radio player is compatible with mobile devices and supports mobile medi
 9. Compatible with any mp3, aac and any major radio providers
 
 == Changelog ==
+
+= 2.0.89 (21-05-2025) =
+* **Fix:** Fixed metadata not updating issue.
 
 = 2.0.88 (07-05-2025) =
 * **New:** Added an option to play all player streams in sticky player mode.
